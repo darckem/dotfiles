@@ -11,6 +11,11 @@ grayColour="\e[0;37m\033[1m"
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export ANDROID_HOME=$HOME/.Android
+export ANDROID_SDK_ROOT=$HOME/.Android/sdk
+
+export GOPATH=$HOME/.go
+
 # Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -60,7 +65,7 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # Manual configuration
 
-PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/code/bin:/home/darckem/.local/bin:/home/darckem/.anaconda3/bin:/home/darckem/Android/flutter/bin
+PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/code/bin:/home/darckem/.local/bin:/home/darckem/.anaconda3/bin:/home/darckem/.Android/flutter/bin:/home/darckem/.Android/sdk/bin
 
 # Manual aliases
 alias ll='lsd -lh --group-dirs=first'
@@ -72,7 +77,7 @@ alias lsn='/usr/bin/ls'
 alias catn='/usr/bin/cat'
 alias catnl='/usr/bin/bat --pagging=never'
 alias cat='/usr/bin/bat'
-
+alias vim='nvim'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
@@ -168,3 +173,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+XDG_DATA_HOME=$HOME/.local/share
+XDG_CONFIG_HOME=$HOME/.config

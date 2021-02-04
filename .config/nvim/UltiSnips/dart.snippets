@@ -1,0 +1,45 @@
+snippet less "StatelessWidget"
+
+class ${1:Name} extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      $0
+    );
+  }
+}
+endsnippet
+
+snippet full "StatefulWidget"
+class $1 extends StatefulWidget {
+  @override
+  _$1State createState() => _$1State();
+}
+
+class _$1State extends State<$1> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      $0
+    );
+  }
+}
+endsnippet
+
+snippet main "MainWidget"
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Placeholder(),
+    );
+  }
+}
+endsnippet
